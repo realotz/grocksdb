@@ -136,7 +136,7 @@ func (db *TransactionDB) GetIntProperty(propName string) (value uint64, success 
 // GetBaseDB gets base db.
 func (db *TransactionDB) GetBaseDB() *DB {
 	return &DB{
-		c:    C.rocksdb_optimistictransactiondb_get_base_db(db.c),
+		c:    C.rocksdb_transactiondb_get_base_db(db.c),
 		name: db.name,
 		opts: db.opts,
 	}
